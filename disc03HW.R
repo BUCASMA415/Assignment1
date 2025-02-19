@@ -1,6 +1,6 @@
 #####
 
-# Discusstion 3
+# Discussion 3
 
 # Name: Aidan Patt
 # Wed Feb 12 14:33:49 2025 ------------------------------
@@ -61,10 +61,22 @@ pairs(penguins[, c('bill_length_mm', 'bill_depth_mm', 'flipper_length_mm',
 coplot(penguins$body_mass_g ~ penguins$bill_length_mm | penguins$bill_depth_mm)
 
 
-save('1stcoplot.png')
-?save()
-save.image('1stcoplot.png')
+#save('1stcoplot.png')
 
-# 1. boxplots
-# 2. ggplots
-# - legends, what does green represent
+#?save()
+#save.image('1stcoplot.png')
+
+
+###### HW #######
+# 1. make a boxplot
+library(ggplot2)
+ggplot(penguins, aes(species, bill_length_mm)) +
+  geom_boxplot()
+
+# 2. Use ggplot and make a plot with a legend
+ggplot(penguins, aes(species, bill_length_mm)) +
+  geom_col(mapping = aes(color = species)) 
+ 
+
+
+  
